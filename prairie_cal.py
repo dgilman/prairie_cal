@@ -64,7 +64,7 @@ def make_calendar(events):
    cal.add('CALSCALE', 'GREGORIAN')
 
    for event in events:
-      hashstr = hashlib.sha1(repr(event).encode('UTF-8')).hexdigest()
+      hashstr = hashlib.sha1(repr(event)).hexdigest()
 
       ev = icalendar.Event()
       ev.add('DTSTART', event['time'])
