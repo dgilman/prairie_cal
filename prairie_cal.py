@@ -75,7 +75,7 @@ def make_calendar(events):
       ev.add('LAST-MODIFIED', now)
       ev.add('STATUS', 'CONFIRMED')
       ev.add('SUMMARY', event['title'])
-      ev.add('DESCRIPTION', event['description'])
+      ev.add('DESCRIPTION', event['location'] + ' | ' + event['description'])
       ev.add('TRANSP', 'TRANSPARENT')
       ev.add('SEQUENCE', 0)
 
